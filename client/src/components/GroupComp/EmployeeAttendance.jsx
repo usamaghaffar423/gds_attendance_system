@@ -18,7 +18,7 @@ const EmployeeAttendance = () => {
   //   const fetchAttendanceStatus = async () => {
   //     try {
   //       const response = await axios.get(
-  //         "http://localhost:3002/api/check-attendance"
+  //         "https://gds-attendance-system-backend.vercel.app/api/check-attendance"
   //       );
   //       const { attendanceRecorded } = response.data;
 
@@ -76,11 +76,14 @@ const EmployeeAttendance = () => {
         if (ipAddress && location) {
           try {
             const response = await toast.promise(
-              axios.post("http://localhost:3002/api/record", {
-                cnic_last6: cnicLast6,
-                ipAddress: ipAddress,
-                location: location,
-              }),
+              axios.post(
+                "https://gds-attendance-system-backend.vercel.app/api/record",
+                {
+                  cnic_last6: cnicLast6,
+                  ipAddress: ipAddress,
+                  location: location,
+                }
+              ),
               {
                 pending: "Recording Attendance...",
                 success: "Attendance recorded successfully!",

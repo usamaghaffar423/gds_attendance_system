@@ -14,7 +14,9 @@ const Attendance = () => {
     // Fetch employee data from the API
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/api/employees");
+        const response = await axios.get(
+          "https://gds-attendance-system-backend.vercel.app/api/employees"
+        );
         setEmployees(response.data);
       } catch (err) {
         setError("You are not authorized to access this page...!");

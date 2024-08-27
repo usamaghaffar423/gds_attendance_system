@@ -17,7 +17,7 @@ const Home = () => {
     try {
       // Make a request to the backend to start a session with the provided username and password
       const response = await axios.post(
-        "http://localhost:3002/api/start-session",
+        "https://gds-attendance-system-backend.vercel.app/api/start-session",
         {
           username,
           password,

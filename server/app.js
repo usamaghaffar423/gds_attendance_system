@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Replace with your client-side URL
+    origin: "https://gds-attendance-system-client.vercel.app", // Replace with your client-side URL
     methods: ["GET", "POST"],
   })
 );

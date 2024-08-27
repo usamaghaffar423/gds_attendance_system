@@ -23,14 +23,17 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3002/api/register/", {
-        username,
-        phoneNumber,
-        designation,
-        role,
-        cnicLast6,
-        password, // Include password in the request
-      });
+      const response = await axios.post(
+        "https://gds-attendance-system-backend.vercel.app/api/register/",
+        {
+          username,
+          phoneNumber,
+          designation,
+          role,
+          cnicLast6,
+          password, // Include password in the request
+        }
+      );
       console.log(response.data);
 
       if (response.data.message) {

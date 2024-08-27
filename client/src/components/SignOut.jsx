@@ -8,7 +8,9 @@ const SignOutButton = () => {
   const handleSignOut = async () => {
     try {
       // Optionally, notify the server to end the session
-      await axios.post("http://localhost:3002/api/signout");
+      await axios.post(
+        "https://gds-attendance-system-backend.vercel.app/api/signout"
+      );
 
       // Remove user data from local storage or session storage
       localStorage.removeItem("user");
