@@ -24,7 +24,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        "https://gds-attendance-system.vercel.app/api/register/",
+        "https://gds-attendance-system-api.vercel.app/api/register/",
         {
           username,
           phoneNumber,

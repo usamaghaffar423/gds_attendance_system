@@ -77,7 +77,7 @@ const EmployeeAttendance = () => {
           try {
             const response = await toast.promise(
               axios.post(
-                "https://gds-attendance-system.vercel.app/api/record",
+                "https://gds-attendance-system-api.vercel.app/api/record",
                 {
                   cnic_last6: cnicLast6,
                   ipAddress: ipAddress,
