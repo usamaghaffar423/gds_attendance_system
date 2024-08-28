@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const Session = require("../Models/SessionModel.js");
 
 exports.startSession = async (req, res) => {

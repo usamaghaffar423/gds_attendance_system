@@ -1,9 +1,9 @@
-const bcrypt = require("bcrypt");
+const bcryptjs = require("bcryptjs");
 const Employee = require("../Models/EmployeeModel");
 
 // Hash password
 const hashPassword = async (password) => {
-  return bcrypt.hash(password, 10);
+  return bcryptjs.hash(password, 10);
 };
 
 // Create a new employee
