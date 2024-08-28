@@ -22,7 +22,7 @@ exports.startSession = async (req, res) => {
     }
 
     // Compare provided password with hashed password stored in the database
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcryptjs.compare(password, user.password);
 
     // Check password match
     if (!isMatch) {
