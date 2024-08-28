@@ -32,7 +32,7 @@ exports.startSession = async (req, res) => {
     // Create session token (JWT)
     const sessionToken = jwt.sign(
       { userId: user.id, role: user.role },
-      "SECRET123",
+      process.env.SECRET,
       { expiresIn: "24h" }
     );
 
