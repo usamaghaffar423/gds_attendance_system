@@ -9,10 +9,22 @@ const sessionRoutes = require("./Routes/sessionRoutes");
 
 const app = express();
 
+const allowedOrigins = [
+  "https://gds-attendance-system-client.vercel.app",
+  "http://localhost:3000", // For local development
+];
+
 app.use(
   cors({
-    origin: "https://gds-attendance-system-client.vercel.app", // Replace with your client-side URL
-    methods: ["GET", "POST"],
+    origin: function (origin, callback) {
+      // Check if the origin is in the allowedOrigins array
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 app.use(bodyParser.json());
