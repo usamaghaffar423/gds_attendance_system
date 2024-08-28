@@ -9,6 +9,11 @@ const sessionRoutes = require("./Routes/sessionRoutes");
 
 const app = express();
 
+// Define the home route
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+
 const allowedOrigins = [
   "https://gds-attendance-system-client.vercel.app",
   "http://localhost:3000", // For local development
