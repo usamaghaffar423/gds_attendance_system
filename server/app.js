@@ -27,6 +27,10 @@ app.use(
     credentials: true,
   })
 );
+
+// Handle preflight requests
+app.options("*", cors());
+app.use(express.json);
 app.use(bodyParser.json());
 app.use(sessionMiddleware);
 
