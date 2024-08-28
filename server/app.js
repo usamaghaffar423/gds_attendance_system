@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 const allowedOrigins = [
-  "https://gds-attendance-system-client.vercel.app",
+  "https://gds-attendance-system-client.vercel.app/",
   "http://localhost:3000", // For local development
 ];
 

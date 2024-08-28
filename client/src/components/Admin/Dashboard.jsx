@@ -15,7 +15,7 @@ const Attendance = () => {
     const fetchEmployees = async () => {
       try {
         const response = await axios.get(
-          "https://gds-attendance-system-backend.vercel.app/api/employees"
+          "https://gds-attendance-system-backend.vercel.app/employees"
         );
         setEmployees(response.data);
       } catch (err) {
