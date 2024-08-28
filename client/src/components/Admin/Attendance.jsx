@@ -35,7 +35,7 @@ const Attendance = () => {
 
   useEffect(() => {
     axios
-      .get("https://gds-attendance-system-api.vercel.app/api/all")
+      .get("https://gds-attendance-system.vercel.app/api/all")
       .then((response) => {
         setAttendanceData(response.data);
         setLoading(false);
